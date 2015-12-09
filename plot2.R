@@ -42,7 +42,8 @@ cat("Done!\n")
 
 # Create png
 cat("Creating png...")
-png(filename='plot2.png', width=480, height=480)
+# Note:  making the background transparent to "exactly" match the original
+png(filename='plot2.png', width=480, height=480, bg = "transparent")
 with(householdPower,plot(datetime,Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab=""))
 dev.off(which=dev.cur())
 cat("\nAll Done!\n")

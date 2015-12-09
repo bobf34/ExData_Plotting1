@@ -41,7 +41,8 @@ cat("Done!\n")
 
 # Create png
 cat("Creating png...")
-png(filename='plot4.png', width=480, height=480)
+# Note:  making the background transparent to "exactly" match the original
+png(filename='plot4.png', width=480, height=480, bg = "transparent")
 par(mfcol=(c(2,2)))
 with(householdPower, {
   #upper left

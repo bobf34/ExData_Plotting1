@@ -42,7 +42,8 @@ cat("Done!\n")
 
 # Create png
 cat("Creating png...")
-png(filename='plot3.png', width=480, height=480)
+# Note:  making the background transparent to "exactly" match the original
+png(filename='plot3.png', width=480, height=480, bg = "transparent")
 with(householdPower,plot(datetime,Sub_metering_1,type="l",ylab="Energy sub metering",xlab=""))
 with(householdPower,points(datetime,Sub_metering_2,type="l",ylab="Energy sub metering",xlab="",col="red"))
 with(householdPower,points(datetime,Sub_metering_3,type="l",ylab="Energy sub metering",xlab="",col="blue"))

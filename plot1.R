@@ -42,7 +42,8 @@ cat("Done!\n")
 
 # Create png
 cat("Creating png...")
-png(filename='plot1.png', width=480, height=480)
+# Note:  making the background transparent to "exactly" match the original
+png(filename='plot1.png', width=480, height=480, bg = "transparent")
 hist(householdPower$Global_active_power,breaks=11,col="red",xlab="Global Active Power (kilowatts)",main="Global Active Power", ylim=c(0,1200))
 dev.off()
 cat("\nAll Done!\n")
